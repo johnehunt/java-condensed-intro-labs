@@ -1,4 +1,9 @@
-package com.jjh.books;
+package com.jjh.main;
+
+import com.jjh.books.Address;
+import com.jjh.books.Author;
+import com.jjh.books.Book;
+import com.jjh.books.Publisher;
 
 public class BookshopApp {
     public static void main(String[] args) {
