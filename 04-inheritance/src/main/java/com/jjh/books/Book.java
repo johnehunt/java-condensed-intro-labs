@@ -27,11 +27,10 @@ public class Book extends Product {
 		this.publisher = publisher;
 	}
 
-	@Override
 	public String toString() {
-		String result = "Book[" + super.toString();
-		result = result + String.format(", author=%s, publisher=%s]", author, publisher);
-		return result;
+		String s = String.format("Book(title=%s, author=%s, price %s, publisher=%s, discount=%s]",
+				getTitle(), author, getPrice(), publisher, getSalePercentage());
+		return s;
 	}
 
 }

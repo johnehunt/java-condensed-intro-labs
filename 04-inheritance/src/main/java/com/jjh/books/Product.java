@@ -4,7 +4,7 @@ public class Product {
 
 	private String title;
 	private double price;
-	private double salePercentage;
+	private double discount;
 	
 	public Product(String title, double price) {
 		this.title = title;
@@ -12,13 +12,17 @@ public class Product {
 	}
 	
 	public void setSaleDiscount(double salePercentage) {
-		this.salePercentage = salePercentage / 100.0;
+		this.discount = salePercentage / 100.0;
 	}
 
 	public double calculateSalePrice() {
-		return price - (price * salePercentage);
+		return price - (price * discount);
 	}
-	
+
+	protected double getSalePercentage() {
+		return discount;
+	}
+
 	public String getTitle() {
 		return title;
 	}
