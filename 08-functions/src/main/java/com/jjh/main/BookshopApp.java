@@ -1,4 +1,8 @@
-package com.jjh.books;
+package com.jjh.main;
+
+import com.jjh.books.Book;
+import com.jjh.books.Bookshop;
+import com.jjh.books.Sales;
 
 import java.util.List;
 import java.util.stream.Collectors;
