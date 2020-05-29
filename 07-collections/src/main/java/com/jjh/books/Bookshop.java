@@ -38,4 +38,10 @@ public class Bookshop {
     public List<Book> getBooks() {
         return this.books;
     }
+
+    public int size() {
+        return getBooks().size();
+    }
+
+
 }
