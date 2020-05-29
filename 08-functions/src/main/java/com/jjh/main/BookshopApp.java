@@ -18,9 +18,11 @@ public class BookshopApp {
 			System.out.println("Book: " + book);
 		}
 
-		bookshop.getBooks().stream().forEach(b -> System.out.println(b));
+		bookshop.getBooks()
+				.stream()
+				.forEach(b -> System.out.println(b));
 
-		if (bookshop.getBooks().size() > 0) {
+		if (bookshop.size() > 0) {
 			Book book1 = bookshop.getBooks().get(0);
 			book1.setSaleDiscount(10.0);
 			System.out.println("Sale price of book: " + book1.calculateSalePrice());
@@ -28,13 +30,16 @@ public class BookshopApp {
 			book1.getPublisher().prettyPrint();
 		}
 
-		if (bookshop.getBooks().size() > 1) {
+		if (bookshop.size() > 1) {
 			Sales salesProduct = bookshop.getBooks().get(1);
 			salesProduct.setSaleDiscount(10.0);
 			System.out.println("Sale price of book: " + salesProduct.calculateSalePrice());
 		}
 
-		List<Book> expensiveBooks = bookshop.getBooks().stream().filter(b -> b.getPrice() > 13.00).collect(Collectors.toList());
+		List<Book> expensiveBooks = bookshop.getBooks()
+				.stream()
+				.filter(b -> b.getPrice() > 13.00)
+				.collect(Collectors.toList());
 		System.out.println(expensiveBooks);
 
 
