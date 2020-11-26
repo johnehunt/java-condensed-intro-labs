@@ -4,7 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class BookTest {
 
@@ -33,25 +34,31 @@ class BookTest {
         Publisher bookPublisher = book.getPublisher();
         double price = book.getPrice();
         assertEquals("Java Unleashed", title, "Title should be 'Java Unleased'");
-        assertEquals(bookAuthor, BookTest.author);
-        assertEquals(bookPublisher, BookTest.publisher);
+        assertEquals(BookTest.author, bookAuthor);
+        assertEquals(BookTest.publisher, bookPublisher);
         assertEquals(15.95, price);
     }
 
     @Test
     void setSaleDiscountAndCheckDiscount() {
-        double myPi = 22.0d / 7.0d;
-        System.out.println(myPi);
         book.setSaleDiscount(10.0);
         double discount = book.calculateSalePrice();
         assertEquals(14.36, discount, 0.01);
     }
 
     @Test
+    void createABookWithANegativePriceWillThrowException() {
+        assertThrows(BookException.class, () -> {
+            new Book("Java Unleashed", author, publisher, -1.0);
+        });
+    }
+
+    @Test
     void setANegativePriceWillThrowException() {
         assertThrows(BookException.class, () -> {
-            book = new Book("Java Unleashed", author, publisher, -1.0);
+            book.setPrice(-1.0);
         });
+        assertEquals(15.95, book.getPrice());
     }
 
 
