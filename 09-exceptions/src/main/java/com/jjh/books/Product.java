@@ -8,7 +8,7 @@ public abstract class Product implements Sales {
 	
 	
 	public Product(String title, double price) {
-		if (price < 0.01) {
+		if (price <= 0.0) {
 			throw new BookException("Illegal Price: " + price);
 		}
 		this.title = title;
