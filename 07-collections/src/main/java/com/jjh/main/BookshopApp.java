@@ -29,6 +29,8 @@ public class BookshopApp {
 			System.out.println("Sale price of book: " + salesProduct.calculateSalePrice());
 		}
 
+
+		System.out.println();
 	}
 
 }
