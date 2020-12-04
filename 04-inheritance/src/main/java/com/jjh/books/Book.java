@@ -1,5 +1,8 @@
 package com.jjh.books;
 
+/**
+ * Book is a type of product that has an author and a publisher.
+ */
 public class Book extends Product {
 
 	private Author author;
@@ -28,9 +31,8 @@ public class Book extends Product {
 	}
 
 	public String toString() {
-		String s = String.format("Book(title=%s, author=%s, price %s, publisher=%s, discount=%s]",
+		return String.format("Book(title=%s, author=%s, price %s, publisher=%s, discount=%s]",
 				getTitle(), author, getPrice(), publisher, getSalePercentage());
-		return s;
 	}
 
 }
