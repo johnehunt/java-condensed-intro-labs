@@ -1,5 +1,8 @@
 package com.jjh.books;
 
+/**
+ * Represents a Book with a title, author, publisher and a price.
+ */
 public class Book {
 
 	private String title;

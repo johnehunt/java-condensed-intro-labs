@@ -5,6 +5,10 @@ import com.jjh.books.Author;
 import com.jjh.books.Book;
 import com.jjh.books.Publisher;
 
+/**
+ * Simple class that provides the entry point
+ * to the Bookshop application.
+ */
 public class BookshopApp {
     public static void main(String[] args) {
         System.out.println("Welcome to the Java Bookshop");

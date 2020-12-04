@@ -1,5 +1,8 @@
 package com.jjh.books;
 
+/**
+ * Represents an author or creator of something.
+ */
 public class Author {
 	
 	private String name;
