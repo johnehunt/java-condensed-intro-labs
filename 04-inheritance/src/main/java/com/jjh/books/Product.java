@@ -1,5 +1,9 @@
 package com.jjh.books;
 
+/**
+ * Acts as the root type for all products
+ * sold by the Bookshop.
+ */
 public class Product {
 
 	private String title;
