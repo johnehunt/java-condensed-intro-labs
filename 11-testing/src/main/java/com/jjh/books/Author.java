@@ -1,12 +1,15 @@
 package com.jjh.books;
 
-public class Publisher implements PrettyPrinter {
+public class Author implements PrettyPrinter {
 	
 	private String name;
 	private Address address;
+
+	public Author(String name) {
+		this.name = name;
+	}
 	
-	public Publisher(String name, Address address) {
-		super();
+	public Author(String name, Address address) {
 		this.name = name;
 		this.address = address;
 	}
@@ -29,12 +32,14 @@ public class Publisher implements PrettyPrinter {
 
 	@Override
 	public String toString() {
-		return String.format("Publisher [name=%s, address=%s]", name, address);
+		return String.format("Author [name=%s, address=%s]", name, address);
 	}
 
+	// Implements the PrettyPrinter interface
+	
 	@Override
 	public void prettyPrint() {
-		System.out.println(String.format("Publisher [name=%s, address=%s]", name, address));
+		System.out.printf("Author [name=%s, address=%s]%n", name, address);
 	}
-	
+
 }

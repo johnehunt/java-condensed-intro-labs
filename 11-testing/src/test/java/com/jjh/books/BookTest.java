@@ -48,16 +48,12 @@ class BookTest {
 
     @Test
     void createABookWithANegativePriceWillThrowException() {
-        assertThrows(BookException.class, () -> {
-            new Book("Java Unleashed", author, publisher, -1.0);
-        });
+        assertThrows(BookException.class, () -> new Book("Java Unleashed", author, publisher, -1.0));
     }
 
     @Test
     void setANegativePriceWillThrowException() {
-        assertThrows(BookException.class, () -> {
-            book.setPrice(-1.0);
-        });
+        assertThrows(BookException.class, () -> book.setPrice(-1.0));
         assertEquals(15.95, book.getPrice());
     }
 
