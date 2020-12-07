@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class BookTest {
 
-    private static Address authorAddress = new Address(10, "High Street", "Any Town", "Somerset", "SA1 23Z");
-    private static Author author = new Author("Pete Smith", authorAddress);
+    private static final Address authorAddress = new Address(10, "High Street", "Any Town", "Somerset", "SA1 23Z");
+    private static final Author author = new Author("Pete Smith", authorAddress);
 
-    private static Address publisherAddress = new Address(1, "Main Street", "Some City", "Kent", "KA1 43A");
-    private static Publisher publisher = new Publisher("Tech Books Publishing Ltd.", publisherAddress);
+    private static final Address publisherAddress = new Address(1, "Main Street", "Some City", "Kent", "KA1 43A");
+    private static final Publisher publisher = new Publisher("Tech Books Publishing Ltd.", publisherAddress);
 
     private Book book;
 

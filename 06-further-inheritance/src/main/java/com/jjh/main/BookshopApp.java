@@ -22,7 +22,6 @@ public class BookshopApp {
 		System.out.println("\nCalculating the Sales Discount price");
 		book.setSaleDiscount(10.0);
 		System.out.println("Sale price of book: " + book.calculateSalePrice());
-		book = null;
 		
 		Book book2 = new Book("Java For Professionals", author, publisher, 12.55);
 		System.out.println("\nBook2: " + book2);

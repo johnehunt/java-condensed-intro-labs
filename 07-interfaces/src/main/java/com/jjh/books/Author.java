@@ -39,7 +39,7 @@ public class Author implements PrettyPrinter {
 	
 	@Override
 	public void prettyPrint() {
-		System.out.println(String.format("Author [name=%s, address=%s]", name, address));
+		System.out.printf("Author [name=%s, address=%s]%n", name, address);
 	}
 
 }

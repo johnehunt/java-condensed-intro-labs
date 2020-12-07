@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Bookshop {
 
-    private List<Book> books = new ArrayList<>();
+    private final List<Book> books = new ArrayList<>();
 
     public Bookshop() {
         setup();
