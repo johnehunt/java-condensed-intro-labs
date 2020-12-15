@@ -1,6 +1,6 @@
 package com.jjh.books;
 
-public class Author extends Person {
+public class Author extends Contact {
 	
 	private String genre;
 
