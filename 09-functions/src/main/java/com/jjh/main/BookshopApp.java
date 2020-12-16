@@ -20,9 +20,10 @@ public class BookshopApp {
 
 		bookshop.getBooks()
 				.stream()
-				.forEach(b -> System.out.println(b));
+				// .forEach(b -> System.out.println(b));
+		        .forEach(System.out::println);
 
-		if (bookshop.size() > 0) {
+		if (bookshop.isEmpty()) {
 			Book book1 = bookshop.getBooks().get(0);
 			book1.setSaleDiscount(10.0);
 			System.out.println("Sale price of book: " + book1.calculateSalePrice());

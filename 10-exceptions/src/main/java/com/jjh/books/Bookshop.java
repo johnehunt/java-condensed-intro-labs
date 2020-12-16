@@ -1,6 +1,8 @@
 package com.jjh.books;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public class Bookshop {
@@ -41,5 +43,50 @@ public class Bookshop {
 
     public List<Book> getBooks() {
         return this.books;
+    }
+
+
+    public int size() {
+        return this.books.size();
+    }
+
+    public boolean isEmpty() {
+        return books.isEmpty();
+    }
+
+    public boolean contains(Object o) {
+        return books.contains(o);
+    }
+
+    public Iterator<Book> iterator() {
+        return books.iterator();
+    }
+
+    public boolean add(Book book) {
+        return books.add(book);
+    }
+
+    public boolean remove(Object o) {
+        return books.remove(o);
+    }
+
+    public boolean addAll(Collection<? extends Book> c) {
+        return books.addAll(c);
+    }
+
+    public boolean removeAll(Collection<?> c) {
+        return books.removeAll(c);
+    }
+
+    public void clear() {
+        books.clear();
+    }
+
+    public Book get(int index) {
+        return books.get(index);
+    }
+
+    public Book remove(int index) {
+        return books.remove(index);
     }
 }
