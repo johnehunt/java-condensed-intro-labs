@@ -8,11 +8,8 @@ public abstract class Product implements Sales {
 	
 	
 	public Product(String title, double price) {
-		if (price <= 0.0) {
-			throw new BookException("Illegal Price: " + price);
-		}
 		this.title = title;
-		this.price = price;
+		setPrice(price);
 	}
 	
 	public abstract void printer();
@@ -38,6 +35,9 @@ public abstract class Product implements Sales {
 	}
 
 	public void setPrice(double price) {
+		if (price <= 0.0) {
+			throw new PriceException("Illegal Price: " + price);
+		}
 		this.price = price;
 	}
 	

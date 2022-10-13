@@ -19,23 +19,19 @@ public class Bookshop {
 
         Address publisherAddress = new Address(1, "Main Street", "Some City", "Kent", "KA1 43A");
         Publisher publisher = new Publisher("Tech Books Publishing Ltd.", publisherAddress);
-
         Book book = new Book("Java Unleashed", author, publisher, 15.95);
-        System.out.println("Book: " + book);
         this.books.add(book);
-
         System.out.println("\nCalculating the Sales Discount price");
         book.setSaleDiscount(10.0);
         System.out.println("Sale price of book: " + book.calculateSalePrice());
 
         try {
-            Book book2 = new Book("Java For Professionals", author, publisher, 12.55);
-            System.out.println("\nBook2: " + book2);
-
-            System.out.println("Book Instance Count: " + Book.getCount());
-
+            Book book2 = new Book("Java For Professionals",
+                    author,
+                    publisher,
+                    12.55);
             this.books.add(book2);
-        } catch (BookException exp) {
+        } catch (PriceException exp) {
             exp.printStackTrace();
         }
 
