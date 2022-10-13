@@ -36,8 +36,7 @@ public class Author implements PrettyPrinter {
 	}
 
 	// Implements the PrettyPrinter interface
-	
-	@Override
+
 	public void prettyPrint() {
 		System.out.printf("Author [name=%s, address=%s]%n", name, address);
 	}

@@ -32,7 +32,6 @@ public class Publisher implements PrettyPrinter {
 		return String.format("Publisher [name=%s, address=%s]", name, address);
 	}
 
-	@Override
 	public void prettyPrint() {
 		System.out.printf("Publisher [name=%s, address=%s]", name, address);
 	}
