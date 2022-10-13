@@ -36,7 +36,7 @@ public abstract class Product implements Sales {
 
 	public void setPrice(double price) {
 		if (price < 0.01) {
-			throw new BookException("Illegal Price: " + price);
+			throw new PriceException("Illegal Price: " + price);
 		}
 		this.price = price;
 	}

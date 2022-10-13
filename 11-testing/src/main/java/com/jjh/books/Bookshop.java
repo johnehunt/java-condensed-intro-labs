@@ -33,7 +33,7 @@ public class Bookshop {
             System.out.println("Book Instance Count: " + Book.getCount());
 
             this.books.add(book2);
-        } catch (BookException exp) {
+        } catch (PriceException exp) {
             exp.printStackTrace();
         }
 
