@@ -1,12 +1,18 @@
 package com.jjh.books;
 
-public abstract class Person {
+/**
+ * Represents an author or creator of something.
+ */
+public class Author {
 	
 	private String name;
 	private Address address;
+
+	public Author(String name) {
+		this.name = name;
+	}
 	
-	public Person(String name, Address address) {
-		super();
+	public Author(String name, Address address) {
 		this.name = name;
 		this.address = address;
 	}
@@ -29,7 +35,7 @@ public abstract class Person {
 
 	@Override
 	public String toString() {
-		return "name=" + name + ", address=" + address;
+		return String.format("Author [name=%s, address=%s]", name, address);
 	}
 
 }
