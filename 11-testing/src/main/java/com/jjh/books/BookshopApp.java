@@ -14,7 +14,8 @@ public class BookshopApp {
 			System.out.println("Book: " + book);
 		}
 
-		bookshop.getBooks().stream().forEach(b -> System.out.println(b));
+//		bookshop.getBooks().stream().forEach(b -> System.out.println(b));
+		bookshop.getBooks().forEach(b -> System.out.println(b));
 
 		if (bookshop.getBooks().size() > 0) {
 			Book book1 = bookshop.getBooks().get(0);

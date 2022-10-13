@@ -19,7 +19,7 @@ public class BookshopApp {
 		}
 
 		bookshop.getBooks()
-				.stream()
+				// .stream()
 				// .forEach(b -> System.out.println(b));
 		        .forEach(System.out::println);
 
