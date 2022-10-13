@@ -1,6 +1,6 @@
 package com.jjh.books;
 
-public class Publisher extends Person {
+public class Publisher extends Contact {
 	
 	private String organisation;
 	
