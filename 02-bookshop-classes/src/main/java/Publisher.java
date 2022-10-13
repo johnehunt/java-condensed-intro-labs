@@ -1,14 +1,14 @@
-package com.jjh.books;
+import java.util.StringJoiner;
 
 /**
  * Represents organisations that publish things,
  * such as books, or music etc.
  */
 public class Publisher {
-	
+
 	private String name;
 	private Address address;
-	
+
 	public Publisher(String name, Address address) {
 		super();
 		this.name = name;
@@ -29,7 +29,9 @@ public class Publisher {
 
 	@Override
 	public String toString() {
-		return String.format("Publisher [name=%s, address=%s]", name, address);
+		return new StringJoiner(", ", Publisher.class.getSimpleName() + "[", "]")
+				.add("name='" + name + "'")
+				.add("address=" + address)
+				.toString();
 	}
-	
 }

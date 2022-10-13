@@ -1,4 +1,4 @@
-package com.jjh.books;
+import java.util.StringJoiner;
 
 /**
  * Represents an author or creator of something.
@@ -17,25 +17,11 @@ public class Author {
 		this.address = address;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
 	@Override
 	public String toString() {
-		return String.format("Author [name=%s, address=%s]", name, address);
+		return new StringJoiner(", ", Author.class.getSimpleName() + "[", "]")
+				.add("name='" + name + "'")
+				.add("address=" + address)
+				.toString();
 	}
-
 }

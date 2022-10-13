@@ -1,4 +1,4 @@
-package com.jjh.books;
+import java.util.StringJoiner;
 
 /**
  * Represents a Book with a title, author, publisher and a price.
@@ -9,7 +9,6 @@ public class Book {
 	private Author author;
 	private Publisher publisher;
 	private double price;
-	private double salePercentage;
 
 	public Book(String title, Author author, Publisher publisher, double price) {
 		this.title = title;
@@ -18,45 +17,13 @@ public class Book {
 		this.price = price;
 	}
 
-	public void setSaleDiscount(double salePercentage) {
-		this.salePercentage = salePercentage / 100.0;
-	}
-
-	public double calculateSalePrice() {
-		return price - (price * salePercentage);
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Author getAuthor() {
-		return author;
-	}
-
-	public Publisher getPublisher() {
-		return publisher;
-	}
-
-	public void setPublisher(Publisher publisher) {
-		this.publisher = publisher;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
 	@Override
 	public String toString() {
-		return String.format("Book [title=%s, author=%s, publisher=%s, price=%s]", title, author, publisher, price);
+		return new StringJoiner(", ", Book.class.getSimpleName() + "[", "]")
+				.add("title='" + title + "'")
+				.add("author=" + author)
+				.add("publisher=" + publisher)
+				.add("price=" + price)
+				.toString();
 	}
-
 }
