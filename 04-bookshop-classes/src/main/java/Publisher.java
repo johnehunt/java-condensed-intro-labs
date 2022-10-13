@@ -1,5 +1,3 @@
-package com.jjh.books;
-
 /**
  * Represents organisations that publish things,
  * such as books, or music etc.
@@ -17,10 +15,6 @@ public class Publisher {
 
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public Address getAddress() {

@@ -1,5 +1,3 @@
-package com.jjh.books;
-
 /**
  * Represents a Book with a title, author, publisher and a price.
  */
@@ -36,10 +34,6 @@ public class Book {
 
 	public Author getAuthor() {
 		return author;
-	}
-
-	public void setAuthor(Author author) {
-		this.author = author;
 	}
 
 	public Publisher getPublisher() {

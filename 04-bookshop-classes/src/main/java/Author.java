@@ -1,5 +1,3 @@
-package com.jjh.books;
-
 /**
  * Represents an author or creator of something.
  */
